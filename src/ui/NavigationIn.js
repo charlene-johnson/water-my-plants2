@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.tab,
     minWidth: 100,
     marginLeft: "25px",
+    marginRight: "35px",
   },
   menu: {
     backgroundImage: theme.palette.primary.mainGradient,
@@ -92,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navigation(props) {
+export default function NavigationOut(props) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -112,10 +113,9 @@ export default function Navigation(props) {
 
   const routes = useMemo(
     () => [
-      { name: "Home", link: "/", activeIndex: 0 },
-      { name: "About", link: "/about", activeIndex: 1 },
-      { name: "Login", link: "/login", activeIndex: 2 },
-      { name: "Register", link: "/register", activeIndex: 3 },
+      { name: "Home", link: "/plants", activeIndex: 0 },
+      { name: "Account", link: "/account", activeIndex: 1 },
+      { name: "Logout", link: "/login", activeIndex: 2 },
     ],
     []
   );

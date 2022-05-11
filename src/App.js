@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter } from "react-router-dom";
 import theme from "./ui/Theme";
-import Navigation from "./ui/Navigation";
+import NavigationOut from "./ui/NavigationOut";
+import NavigationIn from "./ui/NavigationIn";
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -11,7 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-       <Navigation
+       <NavigationIn
         value={value}
         setValue={setValue}
         selectedIndex={selectedIndex}
